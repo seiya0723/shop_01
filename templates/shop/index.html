@@ -1,0 +1,24 @@
+{% extends "shop/base.html" %}
+
+
+{% block main %}
+{% for product in products %}
+<div class="border">
+    <div>{{ product.name }}</div>
+    <div>{{ product.dt }}</div>
+
+    <div>{{ product.price }}</div>
+
+    {% for p in product.images %}
+    <div>
+        <img style="max-width:100%;" src="{{ p.image.url }}" alt="">
+    </div>
+    {% endfor %}
+
+
+</div>
+{% endfor %}
+
+
+{% endblock %}
+
